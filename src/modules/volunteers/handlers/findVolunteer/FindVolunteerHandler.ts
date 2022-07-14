@@ -6,7 +6,7 @@ import {
 import { BaseException } from "../../../../utils/BaseException";
 import { errorHandler } from "../../../../utils/ErrorHandler";
 import { VolunteerMapper } from "../../mappers/VolunteerMapper";
-import { loginAdminMiddleware } from "@functions/authentication/loginAdmin/LoginAdminMiddleware";
+import { loginAdminMiddleware } from "@auth/handlers/loginAdmin/LoginAdminMiddleware";
 import { diContainer } from "src/shared/container";
 import { IVolunteersRepository } from "@volunteers/repositories/IVolunteersRepository";
 

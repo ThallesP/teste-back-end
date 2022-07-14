@@ -1,18 +1,16 @@
-import { middyfy } from "../../../utils/Lambda";
+import { middyfy } from "../../../../utils/Lambda";
 import {
   formatJSONResponse,
   ValidatedEventAPIGatewayProxyEvent,
-} from "../../../utils/ApiGateway";
-import loginAdminSchema from "@functions/authentication/loginAdmin/LoginAdminSchema";
-import { errorHandler } from "../../../utils/ErrorHandler";
-import { dynamo } from "../../../shared/dynamodb/DynamoDBClient";
-import { BaseException } from "../../../utils/BaseException";
+} from "../../../../utils/ApiGateway";
+import loginAdminSchema from "@auth/handlers/loginAdmin/LoginAdminSchema";
+import { errorHandler } from "../../../../utils/ErrorHandler";
+import { BaseException } from "../../../../utils/BaseException";
 import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
-import { AdminMapper } from "../../../modules/volunteers/mappers/AdminMapper";
-import { Admin } from "../../../entities/Admin";
 import { diContainer } from "src/shared/container";
 import { IAdminsRepository } from "src/modules/admins/repositories/IAdminsRepository";
+import { AdminMapper } from "@volunteers/mappers/AdminMapper";
 
 const loginAdminHandler: ValidatedEventAPIGatewayProxyEvent<
   typeof loginAdminSchema

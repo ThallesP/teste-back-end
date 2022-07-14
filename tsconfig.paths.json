@@ -5,7 +5,8 @@
       "@functions/*": ["src/functions/*"],
       "@libs/*": ["src/libs/*"],
       "@volunteers/*": ["src/modules/volunteers/*"],
-      "@auth/*": ["src/modules/auth/*"]
+      "@auth/*": ["src/modules/auth/*"],
+      "@admins/*": ["src/modules/admins/*"]
     }
   }
 }

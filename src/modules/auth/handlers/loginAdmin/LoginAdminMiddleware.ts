@@ -1,6 +1,6 @@
 import { verify } from "jsonwebtoken";
 import { MiddlewareObj } from "@middy/core";
-import { formatJSONResponse } from "../../../utils/ApiGateway";
+import { formatJSONResponse } from "../../../../utils/ApiGateway";
 
 export interface IUserAuth {
   email: string;
